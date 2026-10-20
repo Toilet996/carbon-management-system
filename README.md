@@ -62,7 +62,7 @@
 | 管理端 | Vue 2.6、Element UI 2.14、ECharts 5、Axios、Vue Router、Vuex |
 | 招投标门户 | Vue 2.6、Element UI、ECharts、Vue Router |
 | 数据可视化 | Vue 2.6、DataV、ECharts、Sass |
-| 接口文档 | Swagger / Knife4j |
+| 接口文档 | Swagger |
 | 权限 | RuoYi 角色、菜单、按钮权限体系 |
 
 ## 系统架构
@@ -146,7 +146,7 @@ java -jar neu-admin/target/carbon.jar
 
 后端默认地址：`http://localhost:9090`
 
-接口文档：`http://localhost:9090/doc.html`（如已启用 Knife4j）
+接口文档：`http://localhost:9090/swagger-ui/index.html`
 
 ### 5. 启动前端
 
@@ -253,6 +253,13 @@ Vue CLI 4 项目在 Node 17+ 可能报 `ERR_OSSL_EVP_UNSUPPORTED`。可切换到
 - `carbon.sql` 为完整数据库脚本，包含表结构与演示数据。
 - 本项目基于 RuoYi 框架二次开发，仅用于学习、课程设计与演示。
 
+## 安全说明
+
+- 默认数据库账号、JWT 密钥、演示管理员账号仅用于本地环境，公网部署前必须修改。
+- 不要将真实数据库密码、第三方 API Key 提交到 Git。
+- 建议关闭 Swagger / Druid 控制台的公网访问，配置 HTTPS 和日志脱敏。
+- 详细安全策略见 [SECURITY.md](SECURITY.md)。
+
 ## 后续规划
 
 - [ ] 增加碳足迹核算公式配置与因子库版本管理
@@ -261,7 +268,11 @@ Vue CLI 4 项目在 Node 17+ 可能报 `ERR_OSSL_EVP_UNSUPPORTED`。可切换到
 - [ ] 增加 MES 设备数据采集（MQTT/OPC UA）
 - [ ] 增加报表导出与定时推送
 - [ ] 补充自动化测试与接口文档示例
+- [ ] 补充管理端、招投标门户、数据大屏运行截图
 
 ## License
 
-本项目基于 RuoYi（MIT）二次开发，仅用于学习、课程设计与演示。使用前请遵守相关开源协议。
+本项目基于 RuoYi（MIT）二次开发，仅用于学习、课程设计与演示。
+
+本项目自身代码使用 [MIT License](LICENSE)。使用前请同时遵守相关开源协议。
+

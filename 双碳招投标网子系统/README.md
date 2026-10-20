@@ -1,28 +1,38 @@
-## 开发
+# 双碳招投标网子系统
+
+> 双碳招投标门户，基于 Vue 2 + Element UI。
+
+完整项目说明见根目录 [README](../README.md)。
+
+## 功能
+
+- 招标信息公告
+- 企业注册与信息维护
+- 投标报名 / 投标文件
+- 投诉与处理
+- 政策法规、平台动态
+
+## 启动
 
 ```bash
-
-# 进入项目目录
-cd neu-ui
-
-# 安装依赖
-npm install
-
-# 建议不要直接使用 cnpm 安装依赖，会有各种诡异的 bug。可以通过如下操作解决 npm 下载速度慢的问题
-npm install --registry=https://registry.npm.taobao.org
-
-# 启动服务
-npm run dev
+npm install --registry=https://registry.npmmirror.com
+npm run dev -- --port 8081
 ```
 
-浏览器访问 http://localhost:80
+默认地址：`http://localhost:8081`
 
-## 发布
+接口代理目标：`http://localhost:9090`（见 `vue.config.js`）。
+
+## 构建
 
 ```bash
-# 构建测试环境
-npm run build:stage
-
-# 构建生产环境
 npm run build:prod
 ```
+
+## 主要页面
+
+- 招标：`src/views/bid`
+- 企业：`src/views/enterprise`
+- 投诉：`src/views/complaint`
+- 政策法规：`src/views/policylaw`
+- 平台动态：`src/views/information`
