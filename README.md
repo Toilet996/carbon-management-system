@@ -248,7 +248,8 @@ Vue CLI 4 项目在 Node 17+ 可能报 `ERR_OSSL_EVP_UNSUPPORTED`。可切换到
 
 ## 仓库说明
 
-- 仓库已移除 `node_modules/`、`dist/` 等构建产物，克隆后请在各前端目录执行 `npm install`。
+- 当前 `master` 分支已从 Git 索引移除 `node_modules/`、`dist/` 等构建产物，克隆后请在各前端目录执行 `npm install`。
+  注意：历史提交中仍保留这些文件，因此 `git clone` 的体积暂时不会明显变小；如需彻底瘦身，可使用 `git filter-repo` 重写历史后强制推送（会改写提交记录，请谨慎）。
 - `carbon.sql` 为完整数据库脚本，包含表结构与演示数据。
 - 本项目基于 RuoYi 框架二次开发，仅用于学习、课程设计与演示。
 
